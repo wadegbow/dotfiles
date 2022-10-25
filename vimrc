@@ -12,7 +12,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'junegunn/goyo.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'dim13/smyck.vim'
-Plug '~/.vim/vim-jrnl'
+Plug 'wadegbow/vim-jrnl'
 call plug#end()
 
 set autoindent 

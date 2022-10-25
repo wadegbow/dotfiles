@@ -1,9 +1,21 @@
 - defaults:
-   link:
-    relink: true
+    link:
+        relink: true
 
 - clean: ['~']
 
 - link:
-   ~/.vimrc: 
-   ~/.zshrc: 
+    ~/.vimrc: 
+    ~/.zshrc: 
+    ~/.vim:
+        create: true
+        glob: true
+        path: vim/*
+        exclude: [ vim/plugged ] 
+
+- shell:
+    -
+      command: vim -Nu ~/.vimrc +PlugUpdate +qall &> /dev/null
+      stdin: true
+      stdout: true
+      stderr: true
