@@ -5,8 +5,13 @@
 - clean: ['~']
 
 - link:
+    ~/.shell: 
+    ~/.zsh: 
     ~/.vimrc: 
     ~/.zshrc: 
+    ~/.oh-my-zsh/custom/themes:
+        create: true
+        path: oh-my-zsh/custom/themes
     ~/.vim:
         create: true
         glob: true
