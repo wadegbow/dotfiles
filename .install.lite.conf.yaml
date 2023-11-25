@@ -1,0 +1,26 @@
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.shell: 
+    ~/.zsh: 
+    ~/.vimrc: 
+    ~/.zshrc: 
+    ~/.oh-my-zsh/custom/themes:
+        create: true
+        path: oh-my-zsh/custom/themes
+    ~/.vim:
+        create: true
+        glob: true
+        path: vim/*
+        exclude: [ vim/plugged ] 
+
+- shell:
+    -
+      command: vim -Nu ~/.vimrc +PlugUpdate +qall &> /dev/null
+      stdin: true
+      stdout: true
+      stderr: true
