@@ -9,18 +9,9 @@
     ~/.zsh: 
     ~/.vimrc: 
     ~/.zshrc: 
-    ~/.oh-my-zsh/custom/themes:
-        create: true
-        path: oh-my-zsh/custom/themes
-    ~/.vim:
-        create: true
+    ~/.oh-my-zsh/custom/themes/:
         glob: true
-        path: vim/*
-        exclude: [ vim/plugged ] 
+        path: oh-my-zsh/custom/themes/*
 
 - shell:
-    -
-      command: vim -Nu ~/.vimrc +PlugUpdate +qall &> /dev/null
-      stdin: true
-      stdout: true
-      stderr: true
+  - [git submodule update --init --recursive, Installing submodules]
