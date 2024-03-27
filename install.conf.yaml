@@ -1,0 +1,15 @@
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.shell:
+    ~/.zsh:
+    ~/.vimrc:
+    ~/.zshrc:
+    ~/.oh-my-zsh/custom/themes/solyaris.zsh-theme: solyaris.zsh-theme
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
