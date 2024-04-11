@@ -22,3 +22,19 @@ function convert2gif () {
     convert -delay $4 -loop 0 frames/ffout*.png output.gif
     rm -rf frames
 }
+
+#tmux with session named after directory basename
+function tmuxcd() {
+    dir_name=$(basename "$PWD" | tr  . _)
+
+    if ! tmux has-session -t=$dir_name 2> /dev/null; then
+        tmux new-session -s "$dir_name"
+    else 
+        tmux attach -t $dir_name
+    fi
+}
+
+#get app bundle id
+function bid() {
+    osascript -e 'id of app "'$1'"'
+}

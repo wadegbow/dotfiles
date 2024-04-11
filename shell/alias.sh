@@ -1,4 +1,5 @@
 # Basic Stuff
+alias vim="nvim"
 alias ls="ls --color"
 alias src="source ~/.zshrc"
 alias cp="rsync -ahv --progress"
@@ -16,6 +17,7 @@ alias wanip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias mkhttp="python -m http.server"
 
 # Misc
+# TODO: update this to use yt-dlp
 alias ytdlmp3="youtube-dl --add-metadata -x --audio-format 'mp3' --audio-quality 0"
 alias mpv="mpv --no-border"
 alias mpvpip="mpv --ontop --no-border --on-all-workspaces --autofit=384x216 --geometry=99%:2%"
@@ -28,3 +30,5 @@ alias showFiles="defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder"
 alias hideIcons="defaults write com.apple.finder CreateDesktop -bool false; killall Finder"
 alias showIcons="defaults write com.apple.finder CreateDesktop -bool true; killall Finder"
+
+alias tmux.="tmuxcd"

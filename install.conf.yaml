@@ -1,8 +1,15 @@
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
 - defaults:
     link:
         relink: true
 
-- clean: ['~']
+- clean: ['~', '~/.config']
+
+- create:
+    - ~/.config/tmux
+    - ~/.config/amethyst
 
 - link:
     ~/.shell:
@@ -10,6 +17,10 @@
     ~/.vimrc:
     ~/.zshrc:
     ~/.oh-my-zsh/custom/themes/solyaris.zsh-theme: solyaris.zsh-theme
+    ~/.config/nvim: config/nvim
+    ~/.config/amethyst/amethyst.yml: config/amethyst/amethyst.yml
+    ~/.config/tmux/tmux.conf: config/tmux/tmux.conf
+    ~/.local/bin/tmux-sessionizer: local/bin/tmux-sessionizer
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm]

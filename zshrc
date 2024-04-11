@@ -10,14 +10,10 @@ fi
 
 
 
-# settings
 source ~/.zsh/settings.zsh
-
-# aliases
-source ~/.shell/alias.sh
-
-# functions
+source ~/.zsh/keymaps.zsh
 source ~/.shell/functions.sh
+source ~/.shell/alias.sh
 
 
 
