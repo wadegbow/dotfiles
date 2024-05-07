@@ -1,6 +1,8 @@
 # Basic Stuff
 alias vim="nvim"
-alias ls="ls --color"
+alias ls="eza"
+alias ll="eza -la"
+alias cat="bat"
 alias src="source ~/.zshrc"
 alias cp="rsync -ahv --progress"
 alias filecount="ls -l | wc -l"
