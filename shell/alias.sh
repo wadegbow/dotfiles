@@ -34,3 +34,6 @@ alias hideIcons="defaults write com.apple.finder CreateDesktop -bool false; kill
 alias showIcons="defaults write com.apple.finder CreateDesktop -bool true; killall Finder"
 
 alias tmux.="tmuxcd"
+
+#aws shortcuts
+alias awss="aws ssm start-session --target"
