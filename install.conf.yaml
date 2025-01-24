@@ -10,6 +10,7 @@
 - create:
     - ~/.config/tmux
     - ~/.config/amethyst
+    - ~/.config/aerospace
 
 - link:
     ~/.shell:
@@ -20,6 +21,7 @@
     ~/.config/nvim: config/nvim
     ~/.config/amethyst/amethyst.yml: config/amethyst/amethyst.yml
     ~/.config/tmux/tmux.conf: config/tmux/tmux.conf
+    ~/.config/aerospace/aerospace.toml: config/aerospace/aerospace.toml
     ~/.local/bin/tmux-sessionizer: local/bin/tmux-sessionizer
 
 - shell:
