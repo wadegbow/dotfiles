@@ -1,5 +1,5 @@
 # Place a copy of this config to ~/.aerospace.toml
-# After that, you can edit ~/.aerospace.toml to your liking
+# After that, you can edit ~/.aerospace.toml to your likingaero
 
 # You can use it to add commands that run after login to macOS user session.
 # 'start-at-login' needs to be 'true' for 'after-login-command' to work
@@ -162,6 +162,7 @@ automatically-unhide-macos-hidden-apps = false
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+    e = ['enable toggle'] # turns off aerospace, seems needed to get to non main monitor menu bars
     backspace = ['close-all-windows-but-current', 'mode main']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
@@ -172,6 +173,35 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
 
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
+# window rules
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.Preview'
+    run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.systempreferences'
+    run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-id = 'com.hnc.Discord'
+    run = ['move-node-to-workspace D']
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = ['move-node-to-workspace S']
+
+[[on-window-detected]]
+    if.app-id = 'com.googlecode.iterm2'
+    run = ['move-node-to-workspace W']
+
+[[on-window-detected]]
+    if.app-id = 'com.github.th-ch.youtube-music'
+    run = ['move-node-to-workspace M']
+
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    run = ['move-node-to-workspace B']
