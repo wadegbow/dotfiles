@@ -187,6 +187,10 @@ automatically-unhide-macos-hidden-apps = false
     run = ['layout floating']
 
 [[on-window-detected]]
+    if.app-id = 'com.1password.1password'
+    run = ['layout floating']
+
+[[on-window-detected]]
     if.app-id = 'com.hnc.Discord'
     run = ['move-node-to-workspace D']
 
@@ -203,7 +207,7 @@ automatically-unhide-macos-hidden-apps = false
     run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
-    if.app-id = 'com.github.th-ch.youtube-music'
+    if.window-title-regex-substring = 'YouTube Music'
     run = ['move-node-to-workspace M']
 
 [[on-window-detected]]
