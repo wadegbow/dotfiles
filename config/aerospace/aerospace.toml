@@ -168,10 +168,13 @@ automatically-unhide-macos-hidden-apps = false
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
+    # NOTE: run a script
+    # ctrl-alt-cmd-v = ['workspace V', 'exec-and-forget ~/.config/aerospace/aerospace_example.zsh']
+
+    h = ['join-with left', 'mode main']
+    j = ['join-with down', 'mode main']
+    k = ['join-with up', 'mode main']
+    l = ['join-with right', 'mode main']
 
 # window rules
 [[on-window-detected]]
@@ -213,3 +216,7 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-id = 'md.obsidian'
     run = ['move-node-to-workspace B']
+
+[[on-window-detected]]
+    if.window-title-regex-substring = '- Twitch'
+    run = ['move-node-to-workspace 3']

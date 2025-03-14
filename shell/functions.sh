@@ -38,3 +38,8 @@ function tmuxcd() {
 function bid() {
     osascript -e 'id of app "'$1'"'
 }
+
+# yt music dl album
+function ytmdl() {
+    yt-dlp -x --audio-quality best $1 $2 -o "%(artist)s/[%(release_year)s] %(album)s/%(playlist_index)s %(track)s.%(ext)s"
+}
