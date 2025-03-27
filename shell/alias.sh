@@ -2,7 +2,7 @@
 alias vim="nvim"
 alias ls="eza"
 alias ll="eza -la"
-alias cat="bat"
+alias cat="batcat"
 alias src="source ~/.zshrc"
 alias rsync="rsync -ahv --progress"
 alias filecount="ls -l | wc -l"
