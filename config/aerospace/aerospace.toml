@@ -37,7 +37,7 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = ['move-mouse window-lazy-center']
+# on-focus-changed = ['move-mouse window-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -194,16 +194,16 @@ automatically-unhide-macos-hidden-apps = false
     run = ['layout floating']
 
 [[on-window-detected]]
+    if.app-id = 'io.mpv'
+    run = ['layout floating']
+
+[[on-window-detected]]
     if.app-id = 'com.hnc.Discord'
     run = ['move-node-to-workspace D']
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
     run = ['move-node-to-workspace S']
-
-[[on-window-detected]]
-    if.app-id = 'com.googlecode.iterm2'
-    run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
     if.app-id = 'com.mitchellh.ghostty'
@@ -220,3 +220,7 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.window-title-regex-substring = '- Twitch'
     run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+    if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
+    run = ['layout floating']

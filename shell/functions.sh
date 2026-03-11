@@ -1,8 +1,8 @@
 #xo install
 function xo-install() {
     curl -s https://s3.amazonaws.com/static.getsnworks.com/local-dev/setup.sh | /bin/bash
-    ./xo build
-    ./xo up
+    python3 xo build
+    python3 xo up
 }
 
 #clone-templates

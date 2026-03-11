@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# install homebrew
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+packages=(
+    neovim
+    tmux
+    python
+    php
+    node
+    grunt-cli
+    eza
+    bat
+    ripgrep
+    lazygit
+    jiratui
+    felixkratz/formulae/borders
+)
+
+casks=(
+    ghostty
+    nikitabobko/tap/aerospace
+    alfred
+    jordanbaird-ice
+    acorn
+    devutils
+    tableplus
+    transmit
+)
+
+for pkg in "${packages[@]}"; do
+    echo install $pkg
+done
+
+for cask in "${casks[@]}"; do
+    echo install --cask $cask
+done

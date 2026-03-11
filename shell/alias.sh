@@ -1,5 +1,6 @@
 # Basic Stuff
 alias vim="nvim"
+alias nw="nvim -c 'ZenMode' -c 'set linebreak'" # open nvim and enter ZenMode
 alias ls="eza"
 alias ll="eza -la"
 alias cat="bat"

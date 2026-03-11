@@ -1,8 +1,10 @@
-# home bootstrap / backup
+# bootstrap environment
+```sh
+./bootstrap.sh
+```
 
-just a backup and bootstrap of some of my home files
-
-```bash
+# install dotfiles
+```sh
 ./_install
 ```
 
