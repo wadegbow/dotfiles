@@ -57,7 +57,7 @@ automatically-unhide-macos-hidden-apps = false
     D = 'built-in'
     S = 'built-in'
     W = 'main'
-    M = 'built-in'
+    O = 'main'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -137,7 +137,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-d = 'workspace D'
     alt-s = 'workspace S'
     alt-w = 'workspace W'
-    alt-m = 'workspace M'
+    alt-o = 'workspace O'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -147,7 +147,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-s = 'move-node-to-workspace S'
     alt-shift-w = 'move-node-to-workspace W'
-    alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-o = 'move-node-to-workspace O'
 
     alt-tab = 'focus-monitor --wrap-around next'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
@@ -198,6 +198,10 @@ automatically-unhide-macos-hidden-apps = false
     run = ['layout floating']
 
 [[on-window-detected]]
+    if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
+    run = ['layout floating']
+
+[[on-window-detected]]
     if.app-id = 'com.hnc.Discord'
     run = ['move-node-to-workspace D']
 
@@ -210,17 +214,18 @@ automatically-unhide-macos-hidden-apps = false
     run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
-    if.window-title-regex-substring = 'YouTube Music'
-    run = ['move-node-to-workspace M']
+    if.app-id = 'md.obsidian'
+    run = ['move-node-to-workspace O']
 
 [[on-window-detected]]
-    if.app-id = 'md.obsidian'
+    if.app-id = 'app.zen-browser.zen'
     run = ['move-node-to-workspace B']
 
 [[on-window-detected]]
-    if.window-title-regex-substring = '- Twitch'
-    run = ['move-node-to-workspace 3']
+    if.app-id = 'com.tinyapp.TablePlus'
+    run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-    if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
-    run = ['layout floating']
+    if.app-id = 'com.electron.dockerdesktop'
+    run = ['move-node-to-workspace 2']
+
